@@ -128,48 +128,6 @@ did-system/
 3. View all your information and credentials
 4. Export as JSON or generate QR code
 
-## 🔧 Configuration
-
-### Smart Contract Setup
-
-1. **Deploy DIDRegistry Contract**
-   ```solidity
-   // Deploy to Sepolia testnet using Remix IDE
-   // Copy the deployed contract address
-   ```
-
-2. **Update Contract Address**
-   ```javascript
-   // In app.js, replace:
-   const CONTRACT_ADDRESS = "YOUR_DEPLOYED_CONTRACT_ADDRESS_HERE";
-   ```
-
-### Local Development
-
-```bash
-# Using Live Server (VS Code extension)
-1. Install "Live Server" extension
-2. Right-click index.html
-3. Select "Open with Live Server"
-
-# Or simple HTTP server
-python -m http.server 8000
-# Then open http://localhost:8000
-```
-
-## 🆚 Comparison with DigiLocker
-
-| Feature | DigiLocker | Our DID System |
-|---------|-----------|----------------|
-| **Control** | Government | Self-sovereign |
-| **Geography** | India only | Global |
-| **Storage** | Centralized servers | Blockchain + Local |
-| **Documents** | Government only | Any credential |
-| **Privacy** | Limited | Full control |
-| **Tampering** | Possible | Impossible |
-| **Portability** | Limited | Universal |
-| **Cost** | Free | Minimal gas fees |
-
 ## 🔒 Security Features
 
 - **Blockchain Immutability**: Records cannot be altered once stored
@@ -234,33 +192,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Sujal Belkhode**
-- GitHub: [@sujalbelkhode](https://github.com/sujalbelkhode)
-- Email: sujal@example.com
-- LinkedIn: [Sujal Belkhode](https://linkedin.com/in/sujalbelkhode)
+- GitHub:https://github.com/ASujal404
+- Email: sujalbelkhode30@gmail.com
+- LinkedIn:https://www.linkedin.com/in/sujal-belkhode/
 
-## 🙏 Acknowledgments
-
-- Ethereum Foundation for blockchain infrastructure
-- MetaMask team for wallet integration
-- OpenZeppelin for smart contract standards
-- QRCode.js library for QR generation
-
-## 📞 Support
-
-If you have any questions or need help:
-
-1. Check the [Issues](https://github.com/yourusername/did-system/issues) page
-2. Create a new issue with detailed description
-3. Join our [Discord community](https://discord.gg/your-server)
-4. Email: support@yourproject.com
-
-## 🔗 Links
-
-- [Live Demo](https://your-demo-link.com)
-- [Smart Contract on Etherscan](https://sepolia.etherscan.io/address/your-contract)
-- [Project Documentation](https://docs.yourproject.com)
-- [Video Tutorial](https://youtube.com/your-tutorial)
-
----
-
-**Made with ❤️ for the decentralized future**
