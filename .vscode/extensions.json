@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "ritwickdey.liveserver",
+        "ms-vscode.vscode-json",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "juanblanco.solidity",
+        "tintinweb.solidity-visual-auditor",
+        "formulahendry.auto-rename-tag",
+        "christian-kohler.path-intellisense",
+        "ms-vscode.hexeditor"
+    ]
+}

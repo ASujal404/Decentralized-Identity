@@ -1,0 +1,45 @@
+{
+  "name": "decentralized-identity-system",
+  "version": "2.0.0",
+  "description": "A blockchain-based decentralized identity (DID) system with credential management",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8080 --open=/index.html",
+    "dev": "live-server --port=3000 --open=/index.html --watch=.",
+    "build": "echo 'No build process needed for vanilla JS project'",
+    "test": "echo 'Tests to be implemented'"
+  },
+  "keywords": [
+    "blockchain",
+    "decentralized-identity",
+    "did",
+    "ethereum",
+    "web3",
+    "credentials",
+    "verification",
+    "metamask"
+  ],
+  "author": {
+    "name": "Sujal Belkhode",
+    "email": "sujal@example.com",
+    "url": "https://github.com/sujalbelkhode"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sujalbelkhode/did-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sujalbelkhode/did-system/issues"
+  },
+  "homepage": "https://github.com/sujalbelkhode/did-system#readme",
+  "dependencies": {
+    "ethers": "^5.7.2"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

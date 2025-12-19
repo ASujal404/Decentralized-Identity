@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f1111 0%, #1a1a2e 100%);
+  color: #f3f3f3;
+  text-align: center;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #232f3e 0%, #2c3e50 100%);
+  padding: 30px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+h1 {
+  color: #ff9900;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2 {
+  color: #ff9900;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: #1a1a2e;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: #2c3e50;
+  color: #f3f3f3;
+  border: 2px solid transparent;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #34495e;
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: #ff9900;
+  color: #000;
+  border-color: #ff9900;
+}
+
+/* MAIN CONTENT */
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease;
+  background: #1e1e2e;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FORM ELEMENTS */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+input, select, textarea {
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 2px solid #34495e;
+  background: #2c3e50;
+  color: #f3f3f3;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.3);
+}
+
+.file-label {
+  background: #34495e;
+  color: #f3f3f3;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.file-label:hover {
+  background: #ff9900;
+  color: #000;
+}
+
+#avatarPreview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ff9900;
+  display: none;
+  margin: 10px auto;
+}
+
+#avatarPreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: linear-gradient(135deg, #ff9900 0%, #ff7700 100%);
+  color: #000;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 153, 0, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(255, 153, 0, 0.5);
+}
+
+.btn-secondary {
+  background: #34495e;
+  color: #f3f3f3;
+  border: 2px solid #ff9900;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #ff9900;
+  color: #000;
+}
+
+/* OUTPUT SECTIONS */
+#didOutput, #verifyOutput, #profileData {
+  margin-top: 20px;
+  padding: 20px;
+  background: #2c3e50;
+  border-radius: 10px;
+  border-left: 4px solid #ff9900;
+  text-align: left;
+  line-height: 1.8;
+}
+
+#credentialsList {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.credential-card {
+  background: #2c3e50;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #ff9900;
+  text-align: left;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.credential-card h3 {
+  color: #ff9900;
+  margin-bottom: 10px;
+}
+
+.credential-card p {
+  margin: 5px 0;
+  color: #bbb;
+}
+
+/* QR CODE */
+#qrCodeContainer, #profileQR {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#qrCodeContainer canvas, #profileQR canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background: #232f3e;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h1 { font-size: 1.8em; }
+  .tabs { flex-direction: column; }
+  .tab-content { padding: 20px; }
+  input, select, textarea { max-width: 100%; }
+}

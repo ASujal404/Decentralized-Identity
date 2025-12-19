@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decentralized Identity System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🔐 Decentralized Identity (DID) System</h1>
+    <p>Create and verify your blockchain-based digital identity</p>
+    <p id="connectStatus" style="color: #ff9900; font-weight: bold;">⏳ Connecting to MetaMask...</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="register">📝 Register</button>
+    <button class="tab-btn" data-tab="verify">✅ Verify</button>
+    <button class="tab-btn" data-tab="credentials">🎓 Credentials</button>
+    <button class="tab-btn" data-tab="profile">👤 My Profile</button>
+  </nav>
+
+  <main>
+    <!-- REGISTER TAB -->
+    <section id="register" class="tab-content active">
+      <h2>Create Your DID</h2>
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text" id="phone" placeholder="Phone Number (optional)">
+        <input type="text" id="location" placeholder="Location (optional)">
+        
+        <label for="avatar" class="file-label">📷 Upload Profile Picture</label>
+        <input type="file" id="avatar" accept="image/*" style="display:none;">
+        <div id="avatarPreview"></div>
+        
+        <button id="generateDID" class="btn-primary">🚀 Generate & Register DID</button>
+        <p id="didOutput"></p>
+      </div>
+    </section>
+
+    <!-- VERIFY TAB -->
+    <section id="verify" class="tab-content">
+      <h2>Verify DID</h2>
+      <div class="form-group">
+        <p style="color: #bbb; margin-bottom: 15px;">Leave address empty to verify your own DID</p>
+        <input type="text" id="verifyAddress" placeholder="Enter wallet address (optional)">
+        <button id="verifyDID" class="btn-primary">🔍 Verify Identity</button>
+        <div id="verifyOutput"></div>
+        <div id="qrCodeContainer"></div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS TAB -->
+    <section id="credentials" class="tab-content">
+      <h2>Add Credentials</h2>
+      <div class="form-group">
+        <select id="credentialType">
+          <option value="">Select Credential Type</option>
+          <option value="education">🎓 Education</option>
+          <option value="work">💼 Work Experience</option>
+          <option value="skill">⚡ Skill Certificate</option>
+          <option value="license">📜 License</option>
+        </select>
+        <input type="text" id="credentialTitle" placeholder="Title (e.g., Bachelor's Degree)">
+        <input type="text" id="credentialIssuer" placeholder="Issuer (e.g., University Name)">
+        <input type="date" id="credentialDate">
+        <textarea id="credentialDescription" placeholder="Description (optional)" rows="3"></textarea>
+        <button id="addCredential" class="btn-primary">➕ Add Credential</button>
+        <div id="credentialsList"></div>
+      </div>
+    </section>
+
+    <!-- PROFILE TAB -->
+    <section id="profile" class="tab-content">
+      <h2>My DID Profile</h2>
+      <div id="profileContainer">
+        <button id="loadProfile" class="btn-primary">📋 Load My Profile</button>
+        <div id="profileData"></div>
+        <button id="exportDID" class="btn-secondary" style="display:none;">💾 Export as JSON</button>
+        <button id="generateQR" class="btn-secondary" style="display:none;">📱 Generate QR Code</button>
+        <div id="profileQR"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by Ethereum Blockchain | Created by Sujal Belkhode | Enhanced Version 2.0</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
